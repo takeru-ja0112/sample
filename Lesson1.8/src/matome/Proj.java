@@ -98,7 +98,7 @@ public class Proj {
 		food = "寿司";
 		
 		
-	System.out.println("年齢は" + age + "歳です");
+		System.out.println("年齢は" + age + "歳です");
 //		身長を出力する
 		System.out.println("身長は" + height + "cmです");
 //		体重を出力する
