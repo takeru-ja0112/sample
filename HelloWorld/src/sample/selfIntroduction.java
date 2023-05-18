@@ -3,11 +3,11 @@ package sample;
 public class selfIntroduction {
 
 	public static void main(String[] args) {
-		//氏名
+		// 氏名
 		String name = "田中 尊";
-		//年齢
+		// 年齢
 		int age = 20;
-		//		趣味
+		// 趣味
 		String hobby = "映画鑑賞";
 
 		/*
