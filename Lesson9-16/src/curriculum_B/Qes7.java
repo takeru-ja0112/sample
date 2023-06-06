@@ -6,14 +6,14 @@ import java.util.Scanner;
 public class Qes7 {
 
 	public static void main(String[] args) {
-		// スキャナーオブジェクトを作成します
+		// スキャナーオブジェクトを作成
 		Scanner scanner = new Scanner(System.in);
 
-		// 生徒の人数を入力するように促す
+		// 生徒の人数を入力
 		System.out.print("生徒の人数を入力してください(2以上):");
 		// 生徒の人数を入力
 		int num = scanner.nextInt();
-		// 生徒の人数を2未満が入力されたらメッセージが表示される
+		// 生徒の人数を2未満が入力されたらメッセージ出力
 		if (num < 2) {
 			// 出力内容
 			System.out.println("2以上で入力してください");
@@ -33,7 +33,7 @@ public class Qes7 {
 
 		// 入力された人数分繰り返される処理
 		for (int i = 0; i < num; i++) {
-			// 人数を表示する部分を演算子で増やしていきます。
+			// 人数を増加
 			number++;
 			// 指示文
 			System.out.print(number + "人目の『英語』の点数を入力してください：");
@@ -59,14 +59,14 @@ public class Qes7 {
 		number = 0;
 		// 人数分の平均点を出す処置
 		for (int j = 0; j < num; j++) {
-			// 人数を増やしていく
+			// 人数を増加
 			number++;
 			// 各教科合計の変数を宣言し代入
 			int sum = eng[j] + math[j] + sci[j] + soc[j];
 			// 平均を計算する変数
 			double avg = (double) sum / 4;
 			// 平均点の文章を出力
-			System.out.printf("%d人目の平均点は%.2f点です。\n" , number , avg);
+			System.out.printf("%d人目の平均点は%.2f点です。\n", number, avg);
 		}
 		// 改行
 		System.out.println();
@@ -74,23 +74,23 @@ public class Qes7 {
 		// 英語の平均値を出す変数
 		double avgEng = subAverage(eng);
 		// 出力内容
-		System.out.printf("英語の平均点は%.2f点です。\n" , avgEng);
+		System.out.printf("英語の平均点は%.2f点です。\n", avgEng);
 		// 数学の平均値を出す変数
 		double avgMath = subAverage(math);
 		// 出力内容
-		System.out.printf("数学の平均点は%.2f点です。\n" , avgMath);
+		System.out.printf("数学の平均点は%.2f点です。\n", avgMath);
 		// 理科の平均値を出す変数
 		double avgSci = subAverage(sci);
 		// 出力内容
-		System.out.printf("理科の平均点は%.2f点です。\n" , avgSci);
+		System.out.printf("理科の平均点は%.2f点です。\n", avgSci);
 		// 社会の平均値を出す変数
 		double avgSoc = subAverage(soc);
 		// 出力内容
-		System.out.printf("社会の平均点は%.2f点です。\n" , avgSoc);
+		System.out.printf("社会の平均点は%.2f点です。\n", avgSoc);
 		// 教科の平均値を計算した変数
 		double totalScore = (avgEng + avgMath + avgSci + avgSoc) / 4;
 		// 出力内容
-		System.out.printf("全体の平均点は%.2f点です。\n" , totalScore);
+		System.out.printf("全体の平均点は%.2f点です。\n", totalScore);
 
 	}
 

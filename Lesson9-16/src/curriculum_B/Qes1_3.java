@@ -16,21 +16,21 @@ public class Qes1_3 {
 		String userName = scanner.nextLine();
 
 		// 何も入力されなかった時の処理
-		if (userName.isEmpty() || userName.equals("null")) {
+		if (userName == null || userName.isEmpty()) {
 			// 出力内容
 			System.out.println("「名前を入力してください」");
 
 			// 入力数が10字を超えた場合の処理
 		} else if (userName.length() > 10) {
 			// 出力内容
-			System.out.println("「名前を10字以内にしてください」");
+			System.out.println("「名前を10文字以内にしてください」");
 
 			// 入力内容に半角英数字以外が合った場合の処理
 		} else if (!userName.matches("[a-z0-9]+")) {
 			//出力内容
 			System.out.println("「半角英数字のみで名前を入力してください」");
 
-			// 名前を登録する処理			
+			// 入力オブジェクト終了			
 		} else {
 			scanner.close();
 
@@ -41,39 +41,47 @@ public class Qes1_3 {
 			String[] janken = { "グー", "チョキ", "パー" };
 			// 手の整数型を宣言し、代入
 			int userHand = 2;
+			// 勝つまでの回数を数える変数を宣言し、代入
 			int countToWin = 1;
-			int countFin =  0;
+			// 終了するための変数を宣言し、代入
+			int countFin = 0;
 
 			// 勝つまで繰り返す文
 			while (countFin <= 1) {
 				int enemyHand = (int) (Math.random() * 3);
-				// 勝つまでのカウント変数を宣言し、初期化
 				// 自分の手を出力
 				System.out.println(userName + "の手は「" + janken[userHand] + "」");
 				// 相手の手を出力
 				System.out.println("相手の手は「" + janken[enemyHand] + "」" + "\n");
-				// 自分が負けた時の処理
+
+				// グーに負けた時の処理
 				if (userHand == 1 && enemyHand == 0) {
 					System.out.println("俺の勝ち！\n負けは次につながるチャンスです！\nネバーギブアップ！\n");
 					countToWin++;
-				}
-				if (userHand == 2 && enemyHand == 1) {
+
+				// チョキに負けた時の処理				
+				} else if (userHand == 2 && enemyHand == 1) {
 					// メッセージ内容
 					System.out.println("俺の勝ち！\nたかがじゃんけん、そう思ってないですか？\nそれやったら次も、俺が勝ちますよ\n");
 					countToWin++;
-					// 自分が負けた時の処理
+
+				// パーに負けた時の処理
 				} else if (userHand == 0 && enemyHand == 2) {
 					// メッセージ内容
 					System.out.println("俺の勝ち！\nなんで負けたか、明日まで考えといてください。\nそしたら何かが見えてくるはずです。\n");
 					countToWin++;
-					// あいこだった場合の処理
+					
+				// あいこだった場合の処理
 				} else if (userHand == enemyHand) {
 					// メッセージ内容
 					System.out.println("DRAW あいこ もう一回しましょう！\n");
 					countToWin++;
+					
+				// 勝った場合の処理				
 				} else {
 					System.out.println("やるやん。\n次は俺にリベンジさせて");
 					countFin++;
+					// ループから抜け出す					
 					break;
 				}
 			}
