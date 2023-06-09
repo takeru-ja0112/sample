@@ -47,8 +47,8 @@ public class Qes1_3 {
 			int countFin = 0;
 
 			// 勝つまで繰り返す文
-			while (countFin <= 1) {
-				int enemyHand = (int) (Math.random() * 3);
+			while( countFin == 0) {
+				int enemyHand = (int)(Math.random() * 3);
 				// 自分の手を出力
 				System.out.println(userName + "の手は「" + janken[userHand] + "」");
 				// 相手の手を出力

@@ -21,7 +21,9 @@ public class Qes6 {
 
 		// 最大個数の変数を宣言し代入
 		int maxNum = 11;
+		// テレビの台数をランダムに代入
 		int randomTV = rnd.nextInt(maxNum + 1);
+		// ディスプレイの台数を値を計算して代入
 		int dhis = maxNum - randomTV;
 		// 配列の中にある要素を代入
 		scanner.close();
