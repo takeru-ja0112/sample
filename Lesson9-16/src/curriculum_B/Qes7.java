@@ -17,8 +17,6 @@ public class Qes7 {
 		if (num < 2) {
 			// 出力内容
 			System.out.println("2以上で入力してください");
-			// 処理の終了
-			return;
 		}
 		// 人数を出力するための変数を宣言し代入
 		int number = 0;
@@ -53,8 +51,9 @@ public class Qes7 {
 			soc[i] = scanner.nextInt();
 			// 改行
 			System.out.println();
-
 		}
+		// 入力終了
+		scanner.close();
 		// 人数リセット
 		number = 0;
 		// 人数分の平均点を出す処置

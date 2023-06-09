@@ -22,6 +22,7 @@ public class Qes6 {
 		// 最大個数の変数を宣言し代入
 		int maxNum = 11;
 		int randomTV = rnd.nextInt(maxNum + 1);
+		int dhis = maxNum - randomTV;
 		// 配列の中にある要素を代入
 		scanner.close();
 		for (String item : searchItems) {
@@ -48,18 +49,14 @@ public class Qes6 {
 			// テレビと入力した時の処理
 			case "テレビ":
 
-				// テレビの残り台数を出力
-				System.out.println(item + "の残り台数は" + randomTV + "台です\n");
-
-				break;
-			// ディスプレイと入力した時の処理
+				// ディスプレイと入力した時の処理
 			case "ディスプレイ":
 
-				// ディスプレイの数の計算
-				int disp = (randomTV > 0) ? maxNum - randomTV : maxNum;
+				// 条件演算子で入力された値を代入
+				int tv = (item.equals("テレビ")) ? randomTV : dhis;
 
-				// ディスプレイの残り台数を出力
-				System.out.println(item + "の残り台数は" + disp + "台です\n");
+				// テレビかディスプレイの残り台数を出力
+				System.out.println(item + "の残りの台数は" + tv + "台です\n");
 
 				break;
 			// それ以外の入力の処理
@@ -71,5 +68,4 @@ public class Qes6 {
 			}
 		}
 	}
-
 }

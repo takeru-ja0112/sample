@@ -59,35 +59,34 @@ public class Qes1_3 {
 					System.out.println("俺の勝ち！\n負けは次につながるチャンスです！\nネバーギブアップ！\n");
 					countToWin++;
 
-				// チョキに負けた時の処理				
+					// チョキに負けた時の処理				
 				} else if (userHand == 2 && enemyHand == 1) {
 					// メッセージ内容
 					System.out.println("俺の勝ち！\nたかがじゃんけん、そう思ってないですか？\nそれやったら次も、俺が勝ちますよ\n");
 					countToWin++;
 
-				// パーに負けた時の処理
+					// パーに負けた時の処理
 				} else if (userHand == 0 && enemyHand == 2) {
 					// メッセージ内容
 					System.out.println("俺の勝ち！\nなんで負けたか、明日まで考えといてください。\nそしたら何かが見えてくるはずです。\n");
 					countToWin++;
-					
-				// あいこだった場合の処理
+
+					// あいこだった場合の処理
 				} else if (userHand == enemyHand) {
 					// メッセージ内容
 					System.out.println("DRAW あいこ もう一回しましょう！\n");
 					countToWin++;
-					
-				// 勝った場合の処理				
+
+					// 勝った場合の処理				
 				} else {
 					System.out.println("やるやん。\n次は俺にリベンジさせて");
+
+					// 繰り返し処理の終了
 					countFin++;
-					// ループから抜け出す					
-					break;
 				}
 			}
 			//勝つまでにかかった合計回数の出力
 			System.out.println("\n" + "勝つまでにかかった合計回数は" + countToWin + "回です");
-			// ループから抜ける
 
 		}
 
