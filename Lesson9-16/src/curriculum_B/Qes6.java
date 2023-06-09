@@ -24,7 +24,7 @@ public class Qes6 {
 		// テレビの台数をランダムに代入
 		int randomTV = rnd.nextInt(maxNum + 1);
 		// ディスプレイの台数を値を計算して代入
-		int dhis = maxNum - randomTV;
+		int randomDisp = maxNum - randomTV;
 		// 配列の中にある要素を代入
 		scanner.close();
 		for (String item : searchItems) {
@@ -55,7 +55,7 @@ public class Qes6 {
 			case "ディスプレイ":
 
 				// 条件演算子で入力された値を代入
-				int tv = (item.equals("テレビ")) ? randomTV : dhis;
+				int tv = (item.equals("テレビ")) ? randomTV : randomDisp;
 
 				// テレビかディスプレイの残り台数を出力
 				System.out.println(item + "の残りの台数は" + tv + "台です\n");
