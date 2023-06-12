@@ -1,5 +1,6 @@
 package curriculum_New_question;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Curriculum_New_1_18 {
@@ -25,7 +26,7 @@ public class Curriculum_New_1_18 {
 	}
 
 	// Q4：Q2をオーバーロードして引数を小数2つに変更し、引数同士を和算しコンソールに出力してください。
-	public static void add(double num01, double num02) {
+	public static void multiNum(double num01, double num02) {
 		// 計算結果を出力
 		System.out.println(num01 + num02);
 	}
@@ -58,7 +59,7 @@ public class Curriculum_New_1_18 {
 			sum += num;
 		}
 		// 平均値の計算
-		double avg = (double) sum / aveNumbers.length;
+		double avg = (double)sum / aveNumbers.length;
 		// 出力内容
 		System.out.println(avg);
 		return avg;
@@ -98,17 +99,14 @@ public class Curriculum_New_1_18 {
 		// Q4
 		System.out.println("\nQ4");
 		// 引数を指定する
-		add(2.5, 3.5);
+		multiNum(2.5, 3.5);
 
-		// 05
+		// Q5
 		System.out.println("\nQ5");
 		// 引数を指定して、配列に格納
 		int[] randomMain = random(4);
-		// 配列の要素を順番に取り出す
-		for (int randomNum : randomMain) {
 			// 出力内容
-			System.out.println(randomNum);
-		}
+			System.out.println(Arrays.toString(randomMain));
 
 		// Q6
 		System.out.println("\nQ6");
