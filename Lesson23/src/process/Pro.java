@@ -27,13 +27,13 @@ public class Pro {
 	// セッターメソッドを使用
 	public void setHeight(double height) {
 		// 値を代入
-		this.height = 2.1;
+		this.height = height;
 	}
 
 	// セッターメソッドを使用
 	public void setSpeed(int speed) {
 		// 値を代入
-		this.speed = 80;
+		this.speed = speed;
 	}
 
 	// ゲッターメソッドを使用
