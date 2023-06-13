@@ -4,6 +4,7 @@ package execution;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+// 処理用のパッケージを取得
 import process.Pro;
 
 public class Exe {
