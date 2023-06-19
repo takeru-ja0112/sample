@@ -1,7 +1,6 @@
 package execution29;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
@@ -109,14 +108,13 @@ public class Exe29 {
 			System.exit(0);
 		}
 
-		// もし判定がtrueの時の処理
+		// 入力された順番にソートされるように修正
 		if (judgeSort) {
-			// 昇順に並び替える
-			Collections.sort(sort, Comparator.comparing(Pro29::getName));
-			// faleの時の処理
+		    // 昇順に並び替える
+		    sort.sort(Comparator.comparingInt(info::indexOf));
 		} else {
-			// 降順に並び替える
-			Collections.sort(sort, Comparator.comparing(Pro29::getName).reversed());
+		    // 降順に並び替える
+		    sort.sort(Comparator.comparingInt(info::indexOf).reversed());
 		}
 
 		// 配列の要素の反復処理
