@@ -2,6 +2,7 @@ package execution29;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -81,9 +82,43 @@ public class Exe29 {
 				sort.add(info.get(index));
 			}
 		}
-		// 数字を比較し、昇順に並び替える処理
-		Collections.sort(sort, (s1, s2) -> s1.getName().compareTo(s2.getName()));
-		
+		// ソートする順番を決める出力文
+		System.out.println("ソートする順番を降順か昇順か入力してください");
+		String sortText = scanner.nextLine();
+
+		// 昇順か降順か判定する変数を宣言
+		boolean judgeSort = false;
+
+		// 入力が昇順の時の処理
+		if (sortText.contains("昇順")) {
+			// 真偽値の変更
+			judgeSort = true;
+			// 出力内容
+			System.out.println("昇順で出力します");
+
+			// 入力が降順の時の処理
+		} else if (sortText.contains("降順")) {
+			// 出力内容
+			System.out.println("降順で出力します");
+
+			//何も入力されなかった時の処理
+		} else {
+			// 出力文
+			System.out.println("降順か昇順を入力してください");
+			// システム終了
+			System.exit(0);
+		}
+
+		// もし判定がtrueの時の処理
+		if (judgeSort) {
+			// 昇順に並び替える
+			Collections.sort(sort, Comparator.comparing(Pro29::getName));
+			// faleの時の処理
+		} else {
+			// 降順に並び替える
+			Collections.sort(sort, Comparator.comparing(Pro29::getName).reversed());
+		}
+
 		// 配列の要素の反復処理
 		for (Pro29 test : sort) {
 			System.out.println("都道府県名：" + test.getName());
