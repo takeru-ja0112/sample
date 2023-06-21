@@ -3,11 +3,11 @@ package lesson31;
 public class Main {
 	/*
 		問題1：Vehicleクラスを作成し、String型のprivateなインスタンスフィールド「owner」を定義しましょう。
-
+	
 		問題2：CarクラスとBicycleクラスを作成しましょう。
 		
 		問題3：Vehicleクラスにownerフィールドのゲッター「getOwner」とセッター「setOwner」を定義しましょう。
-
+	
 		問題4：MainクラスからsetOwnerを用いて、Carクラスのインスタンス「car」の所有者を「person1」に、Bicycleクラスのインスタンス「bicycle」の所有者を「person2」に設定します。Personクラスのインスタンスからフルネームを取得し、ownerにセットしてください。
 	 
 	 	問題5：セットできたら、ownerをコンソールに出力してください。
@@ -17,12 +17,12 @@ public class Main {
 	 	問題7：buyメソッドの中でsetOwnerメソッドとthisを用いてownerフィールドの値をセットしましょう。
 	 	
 	 	問題8：さらに、「〇〇が購入しました」と出力する処理を追加してください。
-
+	
 		問題9：引数の型が異なるbuyメソッドを定義しましょう。（仮引数：bicycle）
-
+	
 		問題10：Mainクラスからbuyメソッドを用いて、「person1」がcarを購入、「person2」がbicycleを購入するプログラムを作成しましょう。
 	 */
-	
+
 	public static void main(String[] args) {
 		// インスタンスオブジェクトを作成
 		Person person1 = new Person("鈴木太郎", 20, 1.7, 60);
@@ -32,15 +32,18 @@ public class Main {
 		Car car = new Car();
 		Bicycle bicycle = new Bicycle();
 
+		// Q4
 		// 名前をセット
 		car.setOwner(person1.name);
 		// 名前をセット
 		bicycle.setOwner(person2.name);
+		// Q5
 		// 出力内容
 		System.out.println(car.getOwner());
 		// 出力内容
 		System.out.println(bicycle.getOwner());
 
+		// Q10
 		// 購入メソッド
 		person1.buy(car);
 		// 購入メソッド
